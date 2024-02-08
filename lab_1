@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+int sum(int a, int b) {
+	cout << "Result : " << a + b << endl;
+	return 0;
+}
+int minus_1(int a, int b) {
+	cout << "Result : " << a - b << endl;
+	return 0;
+}
+int mult(int a, int b) {
+	cout << "Result : " << a * b << endl;
+	return 0;
+}
+int divis(int a, int b) {
+	if (b != 0) {
+		cout << "Result : " << a / b << endl;
+	}
+	else {
+		cout << "Error: Division by zero" << endl;
+	}
+	return 0;
+}
+int main() {
+	char operation;
+	double num1, num2;
+	std::cout << "Enter an operation (+, -, *, /): ";
+	std::cin >> operation;
+	std::cout << "Enter two numbers: ";
+	std::cin >> num1 >> num2;
+	switch (operation) {
+	case '+':
+		sum(num1, num2);
+		break;
+	case '-':
+		minus_1(num1, num2);
+		break;
+	case '*':
+		mult(num1, num2);
+		break;
+	case '/':
+		divis(num1, num2);
+		break;
+	default:
+		cout << "Error: Invalid operation" << endl;
+	}
+	return 0;
+}
