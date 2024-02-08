@@ -1,0 +1,70 @@
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+// Объявление функций
+int addition(int a, int b); // сложение
+int subtraction(int a, int b); // вычитание
+int multiplication(int a, int b); // умножение
+int division(int a, int b); // деленией
+
+int main() {
+
+	SetConsoleOutputCP(CP_UTF8);
+	SetConsoleCP(CP_UTF8);
+
+	int num1, num2, choice;
+
+	// Ввод пользователем двух чисел
+	cout << "Enter the first number: ";
+	cin >> num1;
+	cout << "Enter the second number: ";
+	cin >> num2;
+
+	// Ввод вида функции
+	cout << "Specify the type of function you want to apply ( 1 -  Addition, 2 - Subtraction, 3 - Multiplication, 4 - Division )";
+	cin >> choice;
+	switch (choice) {
+	case 1:
+		addition(num1, num2);
+		break;
+	case 2:
+		subtraction(num1, num2);
+		break;
+	case 3:
+		multiplication(num1, num2);
+		break;
+	case 4:
+		division(num1, num2);
+		break;
+	default:
+		cout << "Error: Invalid operation" << endl;
+
+	}
+	return 0;
+}
+
+// Определение функции
+int addition(int a, int b) {
+	cout << "Sum = " << a + b << endl;
+	return 0;
+}
+
+int subtraction(int a, int b) {
+	cout << "Difference =  " << a - b << endl;
+	return 0;
+}
+int multiplication(int a, int b) {
+	cout << "Production  = " << a * b << endl;
+	return 0;
+}
+
+int division(int a, int b) {
+	if (b != 0) {
+		cout << "Quotient : " << a / b << endl;
+	}
+	else {
+		cout << "Error: Division by zero" << endl;
+	}
+	return 0;
+}
