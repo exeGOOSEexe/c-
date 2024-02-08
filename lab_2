@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	
+	int choice;
+
+	cout << "Select the type of cycle(1 - for, 2 - while, 3 - do - while) : ";
+
+	cin >> choice;
+
+	switch (choice) {
+	case 1:
+		cout << "A loop will be used - for" << endl;
+		return 0;
+	case 2:
+		cout << "A loop will be used - while" << endl;
+		return 0;
+	case 3:
+		cout << "A loop will be used - do - while" << endl;
+		return 0;
+	default:
+		cout << "Error, 404" << endl;
+	}
+
+	return 0;
+}
