@@ -4,25 +4,6 @@ using namespace std;
 class Calculator 
 {
 public:
-    void choise(int num1, int num2, int choise) {
-		switch (choise) {
-		case 1:
-			addition(num1, num2);
-			break;
-		case 2:
-			subtraction(num1, num2);
-			break;
-		case 3:
-			multiplication(num1, num2);
-			break;
-		case 4:
-			division(num1, num2);
-			break;
-		default:
-			cout << "Error: Invalid operation" << endl;
-
-		}
-    }
 	void addition(int a, int b) {
 		cout << "Sum = " << a + b << endl;
 	}
@@ -55,7 +36,23 @@ int main() {
     cout << "Enter 2 numbers separated by a space: ";
     cin >> user_num1 >> user_num2;
 
-    calc.choise(user_num1, user_num2 ,user_choise);
+	switch (user_choise) {
+	case 1:
+		calc.addition(user_num1, user_num2);
+		break;
+	case 2:
+		calc.subtraction(user_num1, user_num2);
+		break;
+	case 3:
+		calc.multiplication(user_num1, user_num2);
+		break;
+	case 4:
+		calc.division(user_num1, user_num2);
+		break;
+	default:
+		cout << "Error: Invalid operation" << endl;
+
+		}
    
     return 0;
 }
