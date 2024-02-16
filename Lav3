@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+class Calculator 
+{
+public:
+    void choise(int num1, int num2, int choise) {
+		switch (choise) {
+		case 1:
+			addition(num1, num2);
+			break;
+		case 2:
+			subtraction(num1, num2);
+			break;
+		case 3:
+			multiplication(num1, num2);
+			break;
+		case 4:
+			division(num1, num2);
+			break;
+		default:
+			cout << "Error: Invalid operation" << endl;
+
+		}
+    }
+	void addition(int a, int b) {
+		cout << "Sum = " << a + b << endl;
+	}
+
+	void subtraction(int a, int b) {
+		cout << "Difference =  " << a - b << endl;
+	}
+	void multiplication(int a, int b) {
+		cout << "Production  = " << a * b << endl;
+	}
+
+	void division(int a, int b) {
+		if (b != 0) {
+			cout << "Quotient : " << a / b << endl;
+		}
+		else {
+			cout << "Error: Division by zero" << endl;
+		}
+	}
+
+};
+
+
+int main() {
+    Calculator calc;
+    int user_num1, user_num2, user_choise;
+    cout << "Specify the type of function you want to apply ( 1 -  Addition, 2 - Subtraction, 3 - Multiplication, 4 - Division )" << endl;
+    cin >> user_choise;
+
+    cout << "Enter 2 numbers separated by a space: ";
+    cin >> user_num1 >> user_num2;
+
+    calc.choise(user_num1, user_num2 ,user_choise);
+   
+    return 0;
+}
